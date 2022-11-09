@@ -1,7 +1,34 @@
-import { Spacer, Image, Heading, SimpleGrid, Box } from "@chakra-ui/react";
+import React,{useState} from "react";
+import { Spacer, Image, Heading, SimpleGrid, Box,Skeleton } from "@chakra-ui/react";
 import CarouselOne from "./CarouselOne";
 import CarouselTwo from "./CarouselTwo";
 function Home() {
+  const [loading,setLoading] = useState(true)
+
+  if(loading){
+    return (
+  <SimpleGrid w="85%" m="auto" mt="5" columns={2} spacing={5}>
+            <Box height="320">
+            <Skeleton startColor='pink.500' endColor='orange.500'w="300" height="320"  m="auto"  />
+            </Box>
+            <Box height="320">
+            <Skeleton startColor='pink.500' endColor='orange.500' w="300" height="320"  m="auto" />
+            </Box>
+            <Box height="320">
+            <Skeleton startColor='pink.500' endColor='orange.500' w="300" height="320"  m="auto" />
+            </Box>
+            <Box height="320">
+            <Skeleton startColor='pink.500' endColor='orange.500' w="300" height="320"  m="auto" />
+            </Box>
+            <Box height="320">
+            <Skeleton startColor='pink.500' endColor='orange.500' w="300" height="320"  m="auto" />
+            </Box>
+            <Box height="320">
+            <Skeleton startColor='pink.500' endColor='orange.500' w="300" height="320"  m="auto" />
+            </Box>
+          </SimpleGrid>
+    )
+   }
   return (
     <>
       <CarouselOne />
