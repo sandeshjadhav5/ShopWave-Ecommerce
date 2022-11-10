@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
     <Spacer h={110}/>
-      {/* /<CarouselOne /> */}
+      <CarouselOne />
       <Spacer h="50px" />
 
       <div
@@ -388,7 +388,7 @@ L'Oreal Paris Revitalift 1.5% Hyaluronic Acid Serum
         </Box>
         <SimpleGrid  boxShadow='md' rounded='md' bg='white' backgroundImage="https://images-static.nykaa.com/uploads/8cd63895-aa42-4d65-b307-eeb3bb8207ea.jpg?tr=w-1200,cm-pad_resize" h={300} columns={2} m="auto" w="80%" mt={10} spacing={10}>
           <Box></Box>
-          {/* <Box><CarouselFour/></Box> */}
+          <Box><CarouselFour/></Box>
         </SimpleGrid>
         <Heading
           textAlign="center"
