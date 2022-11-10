@@ -1,6 +1,7 @@
 import {Button, Input} from "@chakra-ui/react"
 import {Icon} from "@chakra-ui/icons"
 import { FaCartPlus } from "react-icons/fa"
+import {NavLink} from "react-router-dom"
 function Navbar(){
     return (
         <>
@@ -449,9 +450,11 @@ function Navbar(){
                    <Input bg="#f4f4f4" ml="100px" w="250px" placeholder="Search On Nykaa"/>
                    </li>
                     <li>
-                        <Button ml="20px" mt="-4px" colorScheme="pink">Sign in</Button>
+                        <Button ml="20px" mt="-4px" w="80px" colorScheme="pink">
+                            <NavLink to="/login">Sign in</NavLink>
+                        </Button>
                     </li>
-                    <li><Icon w="80px" as={FaCartPlus}/></li>
+                    <li><Icon w="70px" as={FaCartPlus}/></li>
                 </ul>
                 
             </div>
