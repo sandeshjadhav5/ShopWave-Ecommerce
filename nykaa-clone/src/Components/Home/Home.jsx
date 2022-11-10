@@ -1,6 +1,7 @@
 import { Spacer, Image, Heading, SimpleGrid, Box } from "@chakra-ui/react";
 import CarouselOne from "./CarouselOne";
 import CarouselTwo from "./CarouselTwo";
+import CarouselThree from "./CarouselThree";
 function Home() {
   return (
     <>
@@ -32,7 +33,7 @@ function Home() {
         >
           TOP BRANDS
         </Heading>
-        <SimpleGrid w="85%" m="auto" mt="5" columns={2} spacing={5}>
+        <SimpleGrid w="85%" m="auto" mt="15" columns={2} spacing={10}>
           <Box height="320">
             <Image src="https://images-static.nykaa.com/uploads/fe1628ec-9c9c-445a-8a8d-29a2517570a9.jpg?tr=w-600,cm-pad_resize" />
           </Box>
@@ -51,10 +52,14 @@ function Home() {
           <Box height="320">
             <Image src="https://images-static.nykaa.com/uploads/09c8b563-39ef-45e7-b286-ffd014da6652.jpg?tr=w-600,cm-pad_resize" />
           </Box>
-        </SimpleGrid>
-        <Box  height="320" m="auto" mt="5">
-          <Image height="320"  m="auto" src="https://images-static.nykaa.com/uploads/09c8b563-39ef-45e7-b286-ffd014da6652.jpg?tr=w-600,cm-pad_resize" />
+          <Box  height="320" >
+          <Image  src="https://images-static.nykaa.com/uploads/a8a8ea5d-f1e6-4da6-a917-f717179ac034.jpg?tr=w-600,cm-pad_resize" />
         </Box>
+        <Box  height="320" >
+          <Image  src="https://images-static.nykaa.com/uploads/c619ceb6-7e8e-4370-9961-bfdad63439e2.jpg?tr=w-600,cm-pad_resize" />
+        </Box>
+        </SimpleGrid>
+        <CarouselThree/>
       </div>
     </>
   );
