@@ -4,21 +4,28 @@ const reducer = (state,action)=>{
       return {
         isAuth:false,
         isLoading:true,
-        isError:false
+        isError:false,
+        userName:"",
+        email:"",
+        password:""
       }
     }
     case 'LOGIN_SUCCESS':{
       return {
         isAuth:true,
         isLoading:false,
-        isError:false
+        isError:false,
+        userName:action.payload.userName,
+        email:action.payload.email,
+        password:action.payload.password
       }
     }
     case 'LOGIN_FAILURE':{
       return {
         isAuth:false,
         isLoading:true,
-        isError:true
+        isError:true,
+        userName:""
       }
     }
     default:{

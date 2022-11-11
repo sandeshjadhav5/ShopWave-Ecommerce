@@ -8,6 +8,9 @@ import reducer from "./reducer"
   isAuth:false,
   isLoading:false,
   isError:false,
+  email:"",
+  password:"",
+ 
  }
 
 function AuthContextProvider({children}){
