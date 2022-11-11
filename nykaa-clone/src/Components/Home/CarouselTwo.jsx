@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-
+import { Icon } from '@chakra-ui/icons';
 function CarouselTwo() {
   return (
     <Carousel>
