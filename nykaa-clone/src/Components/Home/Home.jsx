@@ -5,12 +5,13 @@ import CarouselTwo from "./CarouselTwo";
 import CarouselThree from "./CarouselThree";
 import CarouselFour from "./CarouselFour";
 import CarouselFive from "./CarouselFive";
-
+import {Link} from "react-router-dom"
 
 function Home() {
   return (
     <>
     <Spacer h={110}/>
+    
       <CarouselOne />
       <Spacer h="50px" />
 
@@ -24,6 +25,7 @@ function Home() {
       >
         {/* <CarouselTwo /> */}
       </div>
+      
       <div style={{ backgroundColor: "#f3f3f3" }} >
         <Image
           m="auto"
@@ -31,6 +33,7 @@ function Home() {
           p="10"
           src="https://images-static.nykaa.com/uploads/a47a4ec4-140c-4035-8b85-629db661a638.jpg?tr=w-1200,cm-pad_resize"
         />
+        <Link to="/products">
         <Heading
           textAlign="center"
           fontSize="30"
@@ -39,6 +42,7 @@ function Home() {
         >
           TOP BRANDS
         </Heading>
+        </Link>
         <SimpleGrid w="80%" m="auto" mt="15" columns={2} spacing={10} >
           <Box  height="320"  boxShadow='dark-lg' bg='white'>
             <Image src="https://images-static.nykaa.com/uploads/fe1628ec-9c9c-445a-8a8d-29a2517570a9.jpg?tr=w-600,cm-pad_resize" />
@@ -90,6 +94,7 @@ function Home() {
         >
           ONLY AT NYKAA
         </Heading>
+        <Link to="/products"></Link>
         <Box w="100%" pb={5} h={350} bg="#fbe2e8">
           <Image w="100%" src="https://images-static.nykaa.com/uploads/6892016b-f17f-4ddb-b463-452ef88fc8d6.png?tr=w-1200,cm-pad_resize"/>
           <SimpleGrid m="auto" columns={7} spacing={5}>
