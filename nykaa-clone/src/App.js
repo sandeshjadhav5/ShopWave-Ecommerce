@@ -11,8 +11,6 @@ function App() {
     <div className="App">
     <Navbar/>
     <AllRoutes/>
-    {/* <Spacer h="200px"/> */}
-    {/* <Footer/> */}
     </div>
   );
 }

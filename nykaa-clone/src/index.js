@@ -7,17 +7,19 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AuthContextProvider from './Context/AuthContext/AuthContextProvider';
 import {BrowserRouter} from "react-router-dom"
+import CartContextProvider from './Context/CartContext/CartContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
     <ChakraProvider>
       <AuthContextProvider>
+        <CartContextProvider>
         <BrowserRouter>
         <App />
         </BrowserRouter>
+        </CartContextProvider>
       </AuthContextProvider>
-   
     </ChakraProvider>
   </React.StrictMode>
 );

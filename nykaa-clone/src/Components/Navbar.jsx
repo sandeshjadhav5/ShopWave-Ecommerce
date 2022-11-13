@@ -36,13 +36,13 @@ function Navbar(){
                     <li><a href="">Contour</a></li>
                     <li><a href="">Blush</a></li>
                         </ul>
-                        <h4 className="menu-category">Face</h4>
+                        <h4 className="menu-category">Woman</h4>
                         <ul>
-                        <li><a href="">Face Primer</a></li>
-                    <li><a href="">Concealer</a></li>
-                    <li><a href="">Compact</a></li>
-                    <li><a href="">Contour</a></li>
-                    <li><a href="">Blush</a></li>
+                        <li><a href="">Punjabi</a></li>
+                    <li><a href="">Indian Wear</a></li>
+                    <li><a href="">Wester Wear</a></li>
+                    <li><a href="">Fancy</a></li>
+                    <li><a href="">Traditonal Wear</a></li>
                         </ul>
                     </div>
                      {/* menu-col-1 ENDS HERE */}
@@ -461,7 +461,7 @@ function Navbar(){
                         </Button>
                     </li>}
                   { state.isAuth &&  <li> <Icon w="40px" as={FaUserAlt}/>{state.userName}</li>}
-                    <li><Icon w="40px" as={FaCartPlus}/></li>
+                    <li><Link to="/cart"><Icon w="40px" as={FaCartPlus}/></Link></li>
                 </ul>
                 
             </div>

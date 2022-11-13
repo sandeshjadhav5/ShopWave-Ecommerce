@@ -1,5 +1,6 @@
+
 import { useContext } from "react";
-import { Button, Image,Heading, Stack, Text, Spacer, Box } from "@chakra-ui/react";
+import { Button,useToast, Image,Heading, Stack, Text, Spacer, Box } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext/AuthContextProvider";
@@ -8,6 +9,7 @@ import { loginSuccess } from "../Context/AuthContext/action";
 import {Navigate} from "react-router-dom"
 function Login() {
   const { state, dispatch } = useContext(AuthContext);
+  const toast = useToast()
   const [userData,setUserData]=useState({
     email:"",
     password:"",
@@ -20,6 +22,15 @@ setUserData((pre)=>({...pre,[name]:value}))
 const handleSubmit=(e)=>{
   e.preventDefault()
 dispatch(loginSuccess(userData))
+
+  toast({
+    title: `Welcome ${userData.userName}`,
+    description: "You are Succeccfully Logged in",
+    status: 'success',
+    duration: 9000,
+    isClosable: true,
+  })
+
 return (
   <Navigate to="/"/>
 )
@@ -29,6 +40,14 @@ if(state.isAuth){
   return <Navigate to="/"/>
 }
 const {email,password,userName}=userData
+
+
+
+
+
+
+
+
   return (
     <div style={{backgroundColor:"#f3f3f3",padding:"100px"}}>
       <Spacer h={100} />

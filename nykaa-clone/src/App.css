@@ -12,7 +12,7 @@ nav{
   background-color: white;
   box-shadow: 0 0 15px 0 rgba(0,0,0,.10);
   position: fixed;
-  z-index: 0;
+  z-index: 1000;
 width: 100%;
 }
 
@@ -92,4 +92,23 @@ input{
 }
 .signUpPage{
   background-color: #f3f3f3;
+}
+
+.parentDiv{margin: auto;
+width:400px;
+height:350px;
+margin-left: 20px;
+border-radius: 5px;
+border: solid black 1px;
+overflow-y:auto;}
+
+.childDiv{
+  margin: auto;
+  width:300px;
+  /* height:400px; */
+}
+.childDiv>h1{
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
 }
