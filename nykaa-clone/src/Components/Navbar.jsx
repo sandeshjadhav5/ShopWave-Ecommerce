@@ -1,4 +1,4 @@
-import {Button, Input} from "@chakra-ui/react"
+import {Button,Badge,Input} from "@chakra-ui/react"
 import {Icon} from "@chakra-ui/icons"
 import { FaCartPlus,FaUserAlt} from "react-icons/fa"
 import { Link } from "react-router-dom"
@@ -7,9 +7,11 @@ import {Navigate} from "react-router-dom"
 import {useContext} from "react"
 import { AuthContext } from "../Context/AuthContext/AuthContextProvider"
 import AuthContextProvider from "../Context/AuthContext/AuthContextProvider"
-
+import { CartContext } from "../Context/CartContext/CartContext"
+import { BsClipboardData } from "react-icons/bs"
 function Navbar(){
     const {state,dispatch}=useContext(AuthContext)
+    const {cartData}=useContext(CartContext)
     return (
         <>
         
@@ -461,7 +463,11 @@ function Navbar(){
                         </Button>
                     </li>}
                   { state.isAuth &&  <li> <Icon w="40px" as={FaUserAlt}/>{state.userName}</li>}
-                    <li><Link to="/cart"><Icon w="40px" as={FaCartPlus}/></Link></li>
+                    <li><Link to="/cart"><Icon w="40px" as={FaCartPlus}/></Link> </li>
+                   { cartData.length>0 && <li ><Badge  ml='-35px' mt="-25px" borderRadius="100%"  variant='solid'  colorScheme='green'> 
+        {cartData.length}
+      </Badge></li>
+}
                 </ul>
                 
             </div>

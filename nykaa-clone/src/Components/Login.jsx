@@ -7,6 +7,7 @@ import { AuthContext } from "../Context/AuthContext/AuthContextProvider";
 import { useState } from "react";
 import { loginSuccess } from "../Context/AuthContext/action";
 import {Navigate} from "react-router-dom"
+
 function Login() {
   const { state, dispatch } = useContext(AuthContext);
   const toast = useToast()
@@ -27,7 +28,7 @@ dispatch(loginSuccess(userData))
     title: `Welcome ${userData.userName}`,
     description: "You are Succeccfully Logged in",
     status: 'success',
-    duration: 9000,
+    duration: 6000,
     isClosable: true,
   })
 
@@ -67,9 +68,9 @@ const {email,password,userName}=userData
   </Heading>
   <Input onChange={handleChange} name="userName" value={userName} variant="filled" placeholder="Name"/>
   <Spacer h={5}/>
-        <Input onChange={handleChange} name="email" value={email}  variant="filled" placeholder="Email" />
+        <Input onChange={handleChange} name="email" value={email}  variant="filled" type="email" placeholder="Email" />
         <Spacer h={5}/>
-        <Input onChange={handleChange} name="password" value={password} variant="filled" placeholder="Password" />
+        <Input onChange={handleChange} name="password" value={password} variant="filled" type="password" placeholder="Password" />
         <Spacer h={5}/>
           <Input
             // isLoading

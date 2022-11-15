@@ -10,7 +10,6 @@ import reducer from "./reducer"
   isError:false,
   email:"",
   password:"",
- 
  }
 
 function AuthContextProvider({children}){

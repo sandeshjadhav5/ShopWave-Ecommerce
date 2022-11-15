@@ -4,6 +4,7 @@ import Home from "../Components/Home/Home"
 import Signup from "../Components/Signup";
 import CartPage from "../Components/Cart/CartPage";
 import Products from "../Components/Products/Products";
+import PrivateRoute from "./PrivateRoute";
 function AllRoutes(){
   return (
     <Routes>
@@ -11,7 +12,8 @@ function AllRoutes(){
 <Route path="/login" element={<Login/>}/>
 <Route path="/signup" element={<Signup/>} />
 <Route path="/products" element={<Products/>}/>
-<Route path="/cart" element={<CartPage/>}/>
+<Route path="/cart" element={<PrivateRoute><CartPage/>
+  </PrivateRoute>}/>
     </Routes>
   )
 }

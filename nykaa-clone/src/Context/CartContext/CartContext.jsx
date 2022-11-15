@@ -14,7 +14,7 @@ function CartContextProvider({children}){
             title: 'Added',
             description: `${cartItem.name} Succefully added to Cart`,
             status: 'success',
-            duration: 9000,
+            duration: 6000,
             isClosable: true,
           })
         // console.log([...cartData,cartItem])

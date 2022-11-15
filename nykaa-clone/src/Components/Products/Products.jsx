@@ -1,6 +1,6 @@
 import {useState} from "react"
 import React from "react";
-import {Button,Select,Stack,useToast,SimpleGrid,Image,Badge,MenuItemOption,MenuButton,Menu,MenuOptionGroup,MenuList,MenuDivider,Spacer,Box,Flex,Square,Center,Text} from "@chakra-ui/react";
+import {Button,Select,Stack,Alert,AlertIcon,AlertDescription,AlertTitle,useToast,SimpleGrid,Image,Badge,MenuItemOption,MenuButton,Menu,MenuOptionGroup,MenuList,MenuDivider,Spacer,Box,Flex,Square,Center,Text} from "@chakra-ui/react";
 import {StarIcon} from "@chakra-ui/icons"
 import axios from "axios"
 import CartContextProvider from "../../Context/CartContext/CartContext";
@@ -8,9 +8,11 @@ import { useEffect,useContext} from "react";
 import { CartContext } from "../../Context/CartContext/CartContext";
 import { Skeleton,Heading, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
 import Footer from "../Footer";
+import { AuthContext } from "../../Context/AuthContext/AuthContextProvider";
   
 function Products(){
   const {cartData,setCartData,handleAddToCart}=useContext(CartContext)
+  const {state} =useContext(AuthContext)
     const [data,setData]=useState([])
 const [loading,setLoading]=useState(true)
 // const setTimeout=(() => {
@@ -35,6 +37,7 @@ function myFunction() {
 useEffect(()=>{
     getData().then((res)=>setData(res.data))
 },[])
+
 if(loading){
   return(
     <>
