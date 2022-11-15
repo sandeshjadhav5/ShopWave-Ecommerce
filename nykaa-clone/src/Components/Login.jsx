@@ -42,13 +42,6 @@ if(state.isAuth){
 }
 const {email,password,userName}=userData
 
-
-
-
-
-
-
-
   return (
     <div style={{backgroundColor:"#f3f3f3",padding:"100px"}}>
       <Spacer h={100} />

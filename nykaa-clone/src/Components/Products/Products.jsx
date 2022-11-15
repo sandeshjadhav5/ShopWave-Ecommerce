@@ -14,12 +14,23 @@ function Products(){
   const {cartData,setCartData,handleAddToCart}=useContext(CartContext)
   const {state} =useContext(AuthContext)
     const [data,setData]=useState([])
+    const [brand,setBrand]=useState({brand:"maybelline"})
 const [loading,setLoading]=useState(true)
-// const setTimeout=(() => {
-//   setLoading(true)
-// },5000);
+const [productType,setProductType]=useState({
+  product_type:"lipstick"
+})
+const handleSelectBrand=(e)=>{
+const {name,value}=e.target;
+setBrand((pre)=>({...pre,[name]:value}))
 
+}
+const handleSelectType=(e)=>{
+  const {name,value}=e.target;
+  setBrand((pre)=>({...pre,[name]:value}))
+  
+  }
 const [order,setOrder]=useState("asc")
+
 setTimeout(myFunction, 2000)
 function myFunction() {
   setLoading(false)
@@ -27,16 +38,18 @@ function myFunction() {
     const getData=()=>{
       return  axios.get(`https://makeup-api.herokuapp.com/api/v1/products.json`,{
         params:{
-            brand:"maybelline"
+         brand:brand.brand,
+          product_type:productType.product_type
         }
       })
-      // clearTimeout(myFunction)
+   
       setLoading(false)
       }
-      console.log(cartData)
+      //console.log(cartData)
 useEffect(()=>{
     getData().then((res)=>setData(res.data))
-},[])
+    console.log(data)
+},[brand,productType])
 
 if(loading){
   return(
@@ -76,6 +89,7 @@ if(loading){
 </>
   )
 }
+const {product}=productType
     return(
         <div style={{backgroundColor:"#f3f3f3"}} >
 <Spacer h="150px"/>
@@ -95,25 +109,27 @@ if(loading){
   </MenuList>
 </Menu>
 
-<Select p="2" mt="10px" variant='flushed' color="black" placeholder='Product Type'>
-  <option value='option1'>Brush</option>
-  <option value='option2'>Bronzer</option>
-  <option value='option3'>Eyebrow</option>
+<Select p="2" mt="10px" onChange={handleSelectType} name="product" value={product}  variant='flushed' color="black" placeholder='Product Type'>
+<option value='lipstick'>LipStick</option>
+  <option value='eyeliner'>Eyeliner</option>
+  <option value='cream'>Cream</option>
+  <option value='powder'>Powder</option>
   <option value='option3'>Eyeliner</option>
   <option value='option3'>Eyeshadow</option>
   <option value='option3'>Foundation</option>
   <option value='option3'>Lip Liner</option>
-  <option value='option3'>LipStick</option>
+ 
 </Select>
 
-<Select p="2" mt="10px" variant='flushed' color="black" placeholder='Categories'>
-  <option value='option1'>Bb cc</option>
-  <option value='option2'>LipGloss</option>
-  <option value='option3'>Powder</option>
-  <option value='option3'>Cream</option>
-  <option value='option3'>Pencil</option>
-  <option value='option3'>Liquid</option>
-  <option value='option3'>Gel</option>
+<Select p="2" mt="10px" onChange={handleSelectBrand} name="brand" value={brand} variant='flushed' color="black" placeholder='Brands'>
+  <option value='maybelline'>Maybelline</option>
+  <option value='covergirl'>Covergirl</option>
+  <option value='dior'>Dior</option>
+  <option value="l'oreal">Loreal Parris</option>
+  <option value='zorah'>Zorah</option>
+  <option value='pacifica'>Pacifica</option>
+  <option value='almay
+'>Almay</option>
 </Select>
 <Select p="2" mt="10px" variant='flushed' color="black" placeholder='Price'>
   <option value='option1'>Bb cc</option>
