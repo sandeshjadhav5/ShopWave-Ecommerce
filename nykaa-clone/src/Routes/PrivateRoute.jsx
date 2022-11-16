@@ -7,7 +7,7 @@ function PrivateRoute({children}){
 const {state,dispatch}=useContext(AuthContext)
 
 if(!state.isAuth){
-  
+alert('Please Login First')
   return <>
   <Navigate to="/login"/>
   </>
