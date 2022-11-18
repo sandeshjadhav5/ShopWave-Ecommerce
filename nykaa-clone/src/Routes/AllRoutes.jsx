@@ -14,6 +14,7 @@ function AllRoutes(){
 <Route path="/products" element={<Products/>}/>
 <Route path="/cart" element={<PrivateRoute><CartPage/>
   </PrivateRoute>}/>
+  <Route path="*" element={<div><h1 style={{textAlign:"center",fontSize:"100PX",alignItems:"center",color:"red"}}>404</h1><h1 style={{textAlign:"center",fontSize:"50PX",alignItems:"center"}}>Page Not Found</h1></div>}/>
     </Routes>
   )
 }

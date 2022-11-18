@@ -1,5 +1,6 @@
 import {useState} from "react"
 import React from "react";
+import Navbar from "../Navbar";
 import {Button,Select,Stack,Alert,AlertIcon,AlertDescription,AlertTitle,useToast,SimpleGrid,Image,Badge,MenuItemOption,MenuButton,Menu,MenuOptionGroup,MenuList,MenuDivider,Spacer,Box,Flex,Square,Center,Text} from "@chakra-ui/react";
 import {StarIcon} from "@chakra-ui/icons"
 import axios from "axios"
@@ -54,6 +55,7 @@ useEffect(()=>{
 if(loading){
   return(
     <>
+    <Navbar/>
     <Spacer h='200px'/>
    <Flex>
     <Box w="25%">
@@ -92,6 +94,7 @@ if(loading){
 const {product}=productType
     return(
         <div style={{backgroundColor:"#f3f3f3"}} >
+          <Navbar/>
 <Spacer h="150px"/>
 <Heading textAlign='center' h="50px">All Products</Heading>
 <Flex color='white' >

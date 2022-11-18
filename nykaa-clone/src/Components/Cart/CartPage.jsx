@@ -1,4 +1,5 @@
 import {useContext} from "react"
+import Navbar from "../Navbar"
 import { Link } from "react-router-dom"
 import { CheckIcon } from '@chakra-ui/icons'
 import {Box,Heading,useDisclosure,Flex,Spacer,Text,Image,Input,Button,Divider, Center} from "@chakra-ui/react"
@@ -16,14 +17,20 @@ import {CartContext} from "../../Context/CartContext/CartContext";
 
 function CartPage(){
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const {cartData}=useContext(CartContext)
+    const {cartData,setCartData}=useContext(CartContext)
     let sum=0
     console.log(cartData)
     for(let i=0;i<cartData.length;i++){
 sum+=Math.floor((cartData[i].price)*100)
     }
+
+    const handlePayment=()=>{
+        setCartData([])
+        // onClose
+    }
     return(
         <div>
+            <Navbar/>
             <Spacer h="120px"/>
 
 <Flex ml="100px" mr="100px">
@@ -120,7 +127,7 @@ sum+=Math.floor((cartData[i].price)*100)
                <Text m="auto">Other UPI</Text>
             </Flex>
             <Text mt="30px">2.Enter UPI/VPA Id</Text>
-            <Input mt="10px" placeholder='Enter UPI ID' size='lg' />
+            <Input mt="10px" placeholder='Enter UPI ID' required size='lg' />
             <Button onClick={onOpen} w="100%" mt="20px" color="white" bg="#e80071">{`Verify & Pay Rs.${sum}`} </Button>
             <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -134,7 +141,7 @@ sum+=Math.floor((cartData[i].price)*100)
           </ModalBody>
 
           <ModalFooter>
-            <Link w="100%" to="/"><Button bg="#e80071" colorScheme='green' w="400px" onClick={onClose}>
+            <Link w="100%" to="/"><Button bg="#e80071" colorScheme='green' w="400px" onClick={handlePayment}>
              Continue Shopping on Nykaa
             </Button></Link>
             </ModalFooter>

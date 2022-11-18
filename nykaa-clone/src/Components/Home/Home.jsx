@@ -1,3 +1,5 @@
+import axios from "axios"
+import Navbar from "../Navbar";
 import {
   Spacer,
   Image,
@@ -16,8 +18,12 @@ import CarouselFive from "./CarouselFive";
 import { Link } from "react-router-dom";
 import Footer from "../Footer"
 function Home() {
+
+ 
+
   return (
     <>
+    <Navbar/>
       <Spacer h={110} />
 
       <CarouselOne />
