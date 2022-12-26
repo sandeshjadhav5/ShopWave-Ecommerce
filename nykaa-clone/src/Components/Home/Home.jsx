@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "axios";
 import Navbar from "../Navbar";
 import {
   Spacer,
@@ -16,15 +16,12 @@ import CarouselThree from "./CarouselThree";
 import CarouselFour from "./CarouselFour";
 import CarouselFive from "./CarouselFive";
 import { Link } from "react-router-dom";
-import Footer from "../Footer"
+import Footer from "../Footer";
 function Home() {
-
- 
-
   return (
     <>
-    <Navbar/>
-      <Spacer h={110} />
+      <Navbar />
+      <Spacer h={{ lg: 100, md: 50 }} />
 
       <CarouselOne />
       <Spacer h="50px" />
@@ -58,7 +55,13 @@ function Home() {
           </Heading>
         </Link>
         <Link to="/products">
-          <SimpleGrid w="80%" m="auto" mt="15" columns={2} spacing={10}>
+          <SimpleGrid
+            w="80%"
+            minChildWidth="250px"
+            m="auto"
+            mt="15"
+            spacing={10}
+          >
             <Box boxShadow="dark-lg" bg="white">
               <Image src="https://images-static.nykaa.com/uploads/fe1628ec-9c9c-445a-8a8d-29a2517570a9.jpg?tr=w-600,cm-pad_resize" />
             </Box>
@@ -86,7 +89,7 @@ function Home() {
           </SimpleGrid>
         </Link>
         <CarouselThree />
-        <SimpleGrid w="80%" m="auto" mt="15" columns={2} spacing={10}>
+        <SimpleGrid w="80%" m="auto" mt="15" minChildWidth="250px" spacing={10}>
           <Box boxShadow="dark-lg" bg="white">
             <Image src="https://images-static.nykaa.com/uploads/fe1628ec-9c9c-445a-8a8d-29a2517570a9.jpg?tr=w-600,cm-pad_resize" />
           </Box>
@@ -102,7 +105,6 @@ function Home() {
         </SimpleGrid>
         <Heading
           textAlign="center"
-          fontSize="25"
           fontWeight="20"
           color="#4d464d"
           mt={45}
@@ -111,7 +113,7 @@ function Home() {
           ONLY AT NYKAA
         </Heading>
         <Link to="/products"></Link>
-        <Box w="100%" pb={5} h={350} bg="#fbe2e8">
+        <Box w="95%" m="auto" pb={5} bg="#fbe2e8">
           <Image
             w="100%"
             src="https://images-static.nykaa.com/uploads/6892016b-f17f-4ddb-b463-452ef88fc8d6.png?tr=w-1200,cm-pad_resize"
@@ -142,7 +144,6 @@ function Home() {
         </Box>
         <Heading
           textAlign="center"
-          fontSize="25"
           fontWeight="20"
           color="black"
           mt={45}
@@ -150,7 +151,7 @@ function Home() {
         >
           BESTSELLERS
         </Heading>
-        <SimpleGrid columns={7} spacing={10}>
+        <SimpleGrid w="95%" m="auto" minChildWidth="100px" spacing={10}>
           <Box
             maxW="sm"
             borderWidth="1px"
@@ -441,7 +442,6 @@ function Home() {
         </SimpleGrid>
         <Heading
           textAlign="center"
-          fontSize="25"
           fontWeight="20"
           color="#4d464d"
           mt={45}
@@ -449,7 +449,7 @@ function Home() {
         >
           FEATURED BRANDS
         </Heading>
-        <SimpleGrid columns={4} m="auto" w="80%" spacing={10}>
+        <SimpleGrid minChildWidth="100px" m="auto" w="95%" spacing={10}>
           <Box boxShadow="md" rounded="md" bg="white">
             <Image src="https://images-static.nykaa.com/uploads/e56f43f6-0f07-412f-a300-8ffde7036a8c.jpg?tr=w-300,cm-pad_resize" />
             <Text color="#fc4086" textAlign="center">
@@ -507,7 +507,7 @@ function Home() {
             <Text textAlign="center">Worth Rs. 799 On Rs. 999</Text>
           </Box>
         </SimpleGrid>
-        <SimpleGrid columns={2} m="auto" w="39%" mt={10} spacing={10}>
+        <SimpleGrid minChildWidth="150px" m="auto" w="39%" mt={10} spacing={10}>
           <Box boxShadow="md" rounded="md" bg="white">
             <Image src="https://images-static.nykaa.com/uploads/aedce902-5bcc-4ed1-a28c-5ab2b3c2fed4.jpg?tr=w-300,cm-pad_resize" />
             <Text color="#fc4086" textAlign="center">
@@ -523,25 +523,25 @@ function Home() {
             <Text textAlign="center">Worth Rs. 799 On Rs. 999</Text>
           </Box>
         </SimpleGrid>
-        <SimpleGrid columns={2} m="auto" w="80%" mt={10} spacing={10}>
+        <SimpleGrid minChildWidth="250px" m="auto" w="80%" mt={10} spacing={10}>
           <Box boxShadow="md" rounded="md" bg="white">
             <Image src="https://images-static.nykaa.com/uploads/ea13aa95-2adf-4686-ab33-b2fabca4edc2.jpg?tr=w-600,cm-pad_resize" />
           </Box>
           <Box boxShadow="md" rounded="md" bg="white">
             <Image src="https://images-static.nykaa.com/uploads/f17129eb-c43a-41c8-98ab-88db86c79957.jpg?tr=w-600,cm-pad_resize" />
           </Box>
+          <Box boxShadow="md" rounded="md" bg="white">
+            <Image src="https://images-static.nykaa.com/uploads/25f04cf1-475c-4172-a33b-006159ebc06e.jpg?tr=w-600,cm-pad_resize" />
+          </Box>
         </SimpleGrid>
 
-        <Box m="auto" w="39%" mt={7} boxShadow="md" rounded="md" bg="white">
-          <Image src="https://images-static.nykaa.com/uploads/25f04cf1-475c-4172-a33b-006159ebc06e.jpg?tr=w-600,cm-pad_resize" />
-        </Box>
         <SimpleGrid
           boxShadow="md"
           rounded="md"
           bg="white"
           backgroundImage="https://images-static.nykaa.com/uploads/8cd63895-aa42-4d65-b307-eeb3bb8207ea.jpg?tr=w-1200,cm-pad_resize"
           h={300}
-          columns={2}
+          minChildWidth="250px"
           m="auto"
           w="80%"
           mt={10}
@@ -564,8 +564,8 @@ function Home() {
         </Heading>
         <CarouselFive />
       </div>
-      <Spacer h={100}/>
-      <Footer/>
+      <Spacer h={100} />
+      <Footer />
     </>
   );
 }
