@@ -1,7 +1,7 @@
 Welcome To Nykaa Clone Website
 This Project is created using ReactJS,ChakraUI,BootStrap Individually in Five Days
 
-<h3  align="center"> choice-rice-2961 </h3>
+<h3  align="center">Nykaa E-commerce Website Clone</h3>
 
 <h3>Description :-</h3>
 <p>E-commerce Website Clone of 'Nykaa' . Built individually using React JS, Redux, Chakra UI, Bootstrap in Five Days . </p>
