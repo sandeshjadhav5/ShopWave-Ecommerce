@@ -34,7 +34,7 @@ function Navbar() {
                 <Link to="/">
                   <img
                     className="mainLogo"
-                    src="https://logos-download.com/wp-content/uploads/2021/01/Nykaa_Logo-700x229.png"
+                    src="https://i.imgur.com/Ved90yq.png"
                   />
                 </Link>
               </div>
@@ -545,7 +545,7 @@ function Navbar() {
             {/* THIRD ONE ENDS HERE */}
             {/*THIRD ONE ENDS HERE */}
             <li>
-              <a href="">Nykaa Fashion</a>
+              <a href="">Fashion</a>
               {/* menu-sub STARTS HERE */}
               <div className="menu-sub">
                 {/* menu-col-1 STARTS HERE */}
@@ -880,7 +880,7 @@ function Navbar() {
                 bg="#f4f4f4"
                 ml="80px"
                 w="200px"
-                placeholder="Search On Nykaa"
+                placeholder="Search On ShopWave"
               />
             </li>
             {!state.isAuth && (

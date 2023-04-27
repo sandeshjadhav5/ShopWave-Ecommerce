@@ -110,7 +110,7 @@ function Home() {
           mt={45}
           mb={5}
         >
-          ONLY AT NYKAA
+          ONLY AT ShopWave
         </Heading>
         <Link to="/products"></Link>
         <Box w="95%" m="auto" pb={5} bg="#fbe2e8">
