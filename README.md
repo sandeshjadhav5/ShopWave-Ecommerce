@@ -27,4 +27,4 @@ This Project is created using ReactJS,ChakraUI,BootStrap Individually in Five Da
 
 
 Deployed Link :-
-<a href="https://nykaawebsitebysandesh.netlify.app/" target="_blank">Click Here To See Deployed Link</a>
+<a href="https://shopwave-ecommerce.netlify.app/" target="_blank">https://shopwave-ecommerce.netlify.app/</a>
