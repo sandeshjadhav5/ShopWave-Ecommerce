@@ -23,7 +23,9 @@ function Home() {
       <Navbar />
       <Spacer h={{ lg: 100, md: 50 }} />
 
-      <CarouselOne />
+      <Link to="/products">
+        <CarouselOne />
+      </Link>
       <Spacer h="50px" />
 
       <div
@@ -34,7 +36,9 @@ function Home() {
           backgroundColor: "#f3f3f3",
         }}
       >
-        <CarouselTwo />
+        <Link to="/products">
+          <CarouselTwo />
+        </Link>
       </div>
 
       <div style={{ backgroundColor: "#f3f3f3" }}>

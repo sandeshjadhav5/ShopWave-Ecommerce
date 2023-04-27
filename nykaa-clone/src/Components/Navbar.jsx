@@ -1,4 +1,4 @@
-import { Button, Badge, Input, Icon, Box } from "@chakra-ui/react";
+import { Button, Badge, Input, Text, Icon, Box } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
 import { FaCartPlus, FaUserAlt } from "react-icons/fa";
@@ -18,7 +18,6 @@ function Navbar() {
   return (
     <>
       <nav>
-        <Box bgColor="pink" h="2rem"></Box>
         <div
           className={isHamburger ? "hamburger" : "container"}
           onClick={() => {

@@ -106,62 +106,65 @@ function Signup() {
   const { name, phoneNumber, email, password } = formState;
 
   return (
-    <form onSubmit={handleSubmit} className="signUpPage">
-      <Spacer h={200} />
-      <Stack
-        m="auto"
-        w="350px"
-        spacing={3}
-        boxShadow="xl"
-        p="10"
-        rounded="md"
-        bg="white"
-      >
-        <Box>
-          Register to Earn <Box color="Red">2000 Reward Points!</Box>
-        </Box>
-        <Input
-          onChange={handleChange}
-          name="name"
-          value={name}
-          variant="flushed"
-          placeholder="Name"
-          required
-        />
-        <Input
-          onChange={handleChange}
-          name="phoneNumber"
-          value={phoneNumber}
-          variant="flushed"
-          placeholder="Phone Number"
-          type="number"
-          required
-        />
-        <Input
-          onChange={handleChange}
-          name="email"
-          value={email}
-          variant="flushed"
-          placeholder="Email Address"
-          type="email"
-          required
-        />
-        <Input
-          onChange={handleChange}
-          name="password"
-          value={password}
-          variant="flushed"
-          placeholder="Password"
-          type="password"
-          required
-        />
-        <Spacer />
-        {/* <Input  bg="#fc2779" color="white"  type="submit" /> */}
-        <Input bg="#fc2779" color="white" type="submit" />
-      </Stack>
-    </form>
+    <Box h="100vh">
+      <form onSubmit={handleSubmit} className="signUpPage">
+        <Spacer h={100} />
+        <Stack
+          m="auto"
+          w="350px"
+          spacing={3}
+          boxShadow="xl"
+          p="10"
+          rounded="md"
+          bg="white"
+        >
+          <Text textAlign="center" fontSize={30} fontWeight="bold">
+            Register
+          </Text>
+          <Box>
+            Register to Earn <Box color="Red">2000 Reward Points!</Box>
+          </Box>
+          <Input
+            onChange={handleChange}
+            name="name"
+            value={name}
+            variant="flushed"
+            placeholder="Name"
+            required
+          />
+          <Input
+            onChange={handleChange}
+            name="phoneNumber"
+            value={phoneNumber}
+            variant="flushed"
+            placeholder="Phone Number"
+            type="number"
+            required
+          />
+          <Input
+            onChange={handleChange}
+            name="email"
+            value={email}
+            variant="flushed"
+            placeholder="Email Address"
+            type="email"
+            required
+          />
+          <Input
+            onChange={handleChange}
+            name="password"
+            value={password}
+            variant="flushed"
+            placeholder="Password"
+            type="password"
+            required
+          />
+          <Spacer />
+          {/* <Input  bg="#fc2779" color="white"  type="submit" /> */}
+          <Input bg="#fc2779" color="white" type="submit" />
+        </Stack>
+      </form>
+    </Box>
   );
-
-  //<Link to="/login">Submit</Link>
 }
 export default Signup;
