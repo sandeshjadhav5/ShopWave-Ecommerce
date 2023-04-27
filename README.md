@@ -2,9 +2,9 @@ Welcome To ShopWave Ecommerce Website
 This Project is created using ReactJS,ChakraUI,BootStrap Individually in Five Days
 
 <h3  align="center">ShopWave E-commerce </h3>
-<image src="https://i.imgur.com/JRQHJyw.png"/>
+<image src="https://i.imgur.com/4iBvGsE.png"/>
 <h3>Description :-</h3>
-<p>E-commerce Website ShopWave . Built individually using React JS, Redux, Chakra UI, Bootstrap in Five Days . </p>
+<p>E-commerce Website ShopWave ,, Built individually using React JS, Redux, Chakra UI, Bootstrap in Five Days . </p>
 <br/>
 <h4>Tech Stack</h4>
 <ul>
