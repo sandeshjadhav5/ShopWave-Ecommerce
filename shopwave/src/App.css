@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  background: #fff;
+  background-color: white;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 10px;
+  list-style: menu;
+  position: relative;
+  text-align: left;
+}
+
+nav li {
+  display: inline-block;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 1em;
+}
+
+nav li:hover {
+  color: #fc2779;
+}
+nav li:hover a {
+  color: grey;
+}
+.menu-sub {
+  position: absolute;
+  left: 0;
+  background: white;
+  width: 100%;
+  display: none;
+  padding: 2em;
+}
+nav li:hover .menu-sub {
+  display: block;
+}
+.menu-sub li {
+  display: block;
+}
+.menu-sub a {
+  padding: 0;
+}
+.menu-sub a:hover {
+  color: #fc2779;
+}
+.menu-category {
+  margin-left: 7px;
+  color: black;
+  margin: 2.5em 0 0.25;
+}
+.menu-category:first-of-type {
+  margin-top: 0;
+}
+
+.menu-col-1,
+.menu-col-2 {
+  float: left;
+}
+.menu-col-1 {
+  width: 25%;
+}
+.menu-col-2 {
+  width: 25%;
+}
+
+input {
+  background-color: black;
+  border-radius: 5px;
+}
+.mainLogo {
+  text-align: center;
+  width: 90px;
+}
+.logoDiv img {
+  margin-bottom: -20px;
+}
+.signUpPage {
+  background-color: #f3f3f3;
+}
+
+.parentDiv {
+  margin: auto;
+  width: 400px;
+  height: 350px;
+  margin-left: 20px;
+  border-radius: 5px;
+  border: solid black 1px;
+  overflow-y: auto;
+}
+
+.childDiv {
+  margin: auto;
+  width: 300px;
+  /* height:400px; */
+}
+.childDiv > h1 {
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    position: relative;
+  }
+  .container {
+    position: relative;
+    display: block;
+    /* list-style: none; */
+    background-color: #edf2f8;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-out;
+    width: 50%;
+  }
+  nav ul {
+    margin: 0;
+    padding: 20px;
+    list-style: menu;
+    position: relative;
+    display: block;
+    background-color: #edf2f8;
+    transition: all 0.5s ease-out;
+    text-align: left;
+  }
+
+  nav li {
+    display: flex;
+  }
+  nav a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1em;
+  }
+
+  nav li:hover {
+    color: #fc2779;
+  }
+  nav li:hover a {
+    color: grey;
+  }
+
+  nav li:hover .menu-sub {
+    display: none;
+  }
+  .menu-sub li {
+    display: none;
+  }
+  .menu-sub a {
+    padding: 0;
+  }
+
+  input {
+    background-color: black;
+    left: 0;
+    border-radius: 5px;
+  }
+  .mainLogo {
+    text-align: center;
+    width: 4rem;
+  }
+  .logoDiv img {
+    margin-bottom: 0px;
+  }
+  .signUpPage {
+    background-color: #f3f3f3;
+  }
+}
