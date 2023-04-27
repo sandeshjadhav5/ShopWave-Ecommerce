@@ -1,20 +1,26 @@
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "react-bootstrap/Carousel";
 
 function CarouselFive() {
   return (
-    <Carousel style={{ width: '80%',margin:"auto",marginTop:"50px",boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
-      <Carousel.Item >
+    <Carousel
+      style={{
+        width: "80%",
+        margin: "auto",
+        marginTop: "50px",
+        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+      }}
+    >
+      <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images-static.nykaa.com/uploads/93889767-e36a-427c-a2d6-dc20119d6262.jpg?tr=w-1200,cm-pad_resize"
+          src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/3/a20271c6-249f-480b-bcc7-1b150516e54e1651599573998-Dressberry_Desk.jpg"
           alt="First slide"
-          
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images-static.nykaa.com/uploads/101ccea5-08c4-4ea7-86b3-dd4fcaf6c9a3.jpg?tr=w-1200,cm-pad_resize"
+          src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/3/3f6d1e2a-5ef6-4921-be5d-443a11b11d801651599573985-Dresses_Desk.jpg"
           alt="Second slide"
         />
       </Carousel.Item>
